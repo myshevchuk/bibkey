@@ -1,0 +1,12 @@
+*.elc
+*.info
+*.html
+
+.DS_Store
+
+# Added automatically by ‘eldev init’.
+/.eldev
+/Eldev-local
+
+# autoloads
+/*-autoloads.el
