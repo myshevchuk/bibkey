@@ -146,7 +146,7 @@ Surrounding curly braces, double quotes and whitespace characters are trimmed."
         (left (rx (seq (opt whitespace) (+ (in "\"{" whitespace)))))
         (right (rx (seq (+ (in "\"}" whitespace)) (opt whitespace)))))
     (if value
-        (string-trim value left right)
+        (save-match-data (string-trim value left right))
       default)))
 
 (defun bibkey--format-field (field &rest specs)
